@@ -49,9 +49,10 @@
   <p class="date">Effective July 25, 2026</p>
 
   <p class="notice">This is the enrollment and consent form presented to each team
-  member in person during onboarding. It is published on this page so the opt-in
-  language and disclosures are publicly verifiable. Enrollment is voluntary and is
-  completed with a manager, on paper or on this screen.</p>
+  member during onboarding — on paper with a manager during in-person onboarding,
+  or completed on this page during online onboarding. It is published here so the
+  opt-in language and disclosures are publicly verifiable. Enrollment is voluntary;
+  onboarding can be completed without opting in.</p>
 
   <div class="form">
     <h2>Shift Notification Service — Enrollment</h2>
@@ -84,12 +85,31 @@
       <div class="field"><label>Signature</label><div class="line"></div></div>
       <div class="field" style="max-width:10rem"><label>Date</label><div class="line"></div></div>
     </div>
+
+    <button id="submitBtn" type="button"
+      style="margin-top:24px; font:inherit; font-weight:600; color:#fff;
+             background:var(--accent); border:0; padding:10px 22px; cursor:pointer">
+      Complete enrollment form</button>
+    <p id="confirm" hidden style="margin-top:14px; padding:10px 14px; background:#f5f8fb;
+       border-left:3px solid var(--accent); font-size:15px"></p>
   </div>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      var opted = document.getElementById('consent').checked;
+      var el = document.getElementById('confirm');
+      el.textContent = opted
+        ? "Form complete — you have opted in to shift text alerts. Show this screen to your manager to finish enrollment. You can reply STOP at any time to cancel."
+        : "Form complete — you have NOT opted in to text alerts, and your onboarding can still proceed. You can enroll later with your manager or by texting JOIN.";
+      el.hidden = false;
+    });
+  </script>
 
   <div class="keyword">
     <h2 style="font-size:1.05rem; margin:0 0 8px">Alternative: opt in by text</h2>
     <p>A team member may also enroll by texting <strong>JOIN</strong> to the service
-    number. They immediately receive a confirmation message: <em>"Noah Schwartz: You're enrolled in team shift alerts. Msg frequency varies. Msg &amp;
+    number. They immediately receive a confirmation message: <em>"[BRAND NAME AS
+    REGISTERED]: You're enrolled in team shift alerts. Msg frequency varies. Msg &amp;
     data rates may apply. Reply HELP for help, STOP to cancel."</em></p>
   </div>
 
