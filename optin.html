@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMS Opt-In — Noah Schwartz</title>
+<style>
+  :root { --ink:#1c2430; --muted:#5a6675; --accent:#1f4e79; --rule:#d9dee5; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); background:#fff;
+         font:16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { border-bottom:2px solid var(--ink); padding:28px 20px 18px; }
+  .wrap { max-width:46rem; margin:0 auto; padding:0 20px 64px; }
+  header .wrap { padding-bottom:0; }
+  .org { font-weight:700; letter-spacing:.02em; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a:hover, a:focus-visible { text-decoration:underline; outline-offset:2px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:36px 0 4px; }
+  .date { color:var(--muted); font-size:14px; margin-bottom:22px; }
+  .notice { border-left:3px solid var(--accent); padding:10px 14px; background:#f5f8fb;
+            font-size:15px; margin-bottom:28px; }
+  .form { border:1px solid var(--ink); padding:26px 24px; }
+  .form h2 { margin:0 0 4px; font-size:1.15rem; }
+  .form .sub { color:var(--muted); font-size:14px; margin:0 0 20px; }
+  .field { margin:0 0 18px; }
+  .field label { display:block; font-weight:600; font-size:14px; margin-bottom:4px; }
+  .line { border:0; border-bottom:1px solid var(--ink); width:100%; height:1.6em;
+          font:inherit; background:transparent; }
+  .consent { display:flex; gap:10px; align-items:flex-start; margin:22px 0; }
+  .consent input[type=checkbox] { margin-top:5px; width:16px; height:16px; }
+  .consent label { font-size:15px; }
+  .sig { display:flex; gap:24px; margin-top:26px; }
+  .sig .field { flex:1; }
+  .keyword { margin-top:28px; padding-top:18px; border-top:1px solid var(--rule); }
+  a { color:var(--accent); }
+  footer { border-top:1px solid var(--rule); margin-top:48px; padding-top:16px;
+           color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="org">Noah Schwartz</div>
+    <nav><a href="index.html">Home</a><a href="optin.html">SMS Opt-In</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Text Message Enrollment &amp; Consent</h1>
+  <p class="date">Effective July 25, 2026</p>
+
+  <p class="notice">This is the enrollment and consent form presented to each team
+  member in person during onboarding. It is published on this page so the opt-in
+  language and disclosures are publicly verifiable. Enrollment is voluntary and is
+  completed with a manager, on paper or on this screen.</p>
+
+  <div class="form">
+    <h2>Shift Notification Service — Enrollment</h2>
+    <p class="sub">Noah Schwartz</p>
+
+    <div class="field">
+      <label for="name">Team member name</label>
+      <input class="line" id="name" type="text" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="phone">Mobile phone number</label>
+      <input class="line" id="phone" type="text" autocomplete="off">
+    </div>
+
+    <div class="consent">
+      <input type="checkbox" id="consent">
+      <label for="consent"><strong>Yes, I agree to receive text messages</strong> from
+      Noah Schwartz about work shift scheduling — including shift-coverage
+      alerts, offers to pick up open shifts, and schedule-change confirmations — at the
+      mobile number provided above. Message frequency varies. Message and data rates may
+      apply. I can reply <strong>HELP</strong> for help and <strong>STOP</strong> to
+      cancel at any time. I understand that consent is voluntary and <strong>is not a
+      condition of my employment</strong>, and that I may decline or later opt out
+      without affecting my job. See the
+      <a href="privacy.html">Privacy Policy</a> and
+      <a href="terms.html">Terms &amp; Conditions</a>.</label>
+    </div>
+
+    <div class="sig">
+      <div class="field"><label>Signature</label><div class="line"></div></div>
+      <div class="field" style="max-width:10rem"><label>Date</label><div class="line"></div></div>
+    </div>
+  </div>
+
+  <div class="keyword">
+    <h2 style="font-size:1.05rem; margin:0 0 8px">Alternative: opt in by text</h2>
+    <p>A team member may also enroll by texting <strong>JOIN</strong> to the service
+    number. They immediately receive a confirmation message: <em>"Noah Schwartz: You're enrolled in team shift alerts. Msg frequency varies. Msg &amp;
+    data rates may apply. Reply HELP for help, STOP to cancel."</em></p>
+  </div>
+
+  <footer>
+    <p>Noah Schwartz · Davis, California ·
+    <a href="mailto:noahschwa@gmail.com">noahschwa@gmail.com</a></p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
+  </footer>
+</main>
+</body>
+</html>
